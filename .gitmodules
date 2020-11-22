@@ -1,0 +1,3 @@
+[submodule "qphotosphere"]
+	path = qphotosphere
+	url = https://github.com/mymike00/qphotosphere
