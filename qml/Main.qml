@@ -38,6 +38,7 @@
              anchors.fill: parent
              imageUrl: Qt.resolvedUrl("assets/sphere.jpg") // this initial version supports correctly only full 360 panospheres
 
+             onFieldOfViewChanged: console.log(fov)
              MouseArea {
                  id: ma
                  anchors.fill: parent
@@ -58,12 +59,7 @@
                      sphere.elevation = clickedElevation + posDiff.y / 6.0
                      console.log(sphere.azimuth, sphere.elevation)
                  }
-                 onWheel: {
-                     if (wheel.modifiers & Qt.ControlModifier) {
-                         sphere.fieldOfView +=  wheel.angleDelta.y / 120;
-                         console.log(sphere.fieldOfView)
-                     }
-                 }
+                 onWheel: sphere.fieldOfView -=  wheel.angleDelta.y / 30
              }
          }
      }
