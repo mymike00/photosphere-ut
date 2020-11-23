@@ -16,12 +16,13 @@
  import QtQuick 2.9
  import QtQuick.Window 2.2
  import PhotoSphere 1.0
+ import Ubuntu.Components 1.3
 
  Window {
      visible: true
      width: 640
      height: 480
-     title: qsTr("Hello World")
+     title: i18n.tr("Hello World")
 
      // Insert your update() hack of choice here, something that pushes redraws
 
@@ -35,7 +36,7 @@
              id: sphere
              visible: true
              anchors.fill: parent
-             imageUrl: "<your photosphere url>" // this initial version supports correctly only full 360 panospheres
+             imageUrl: Qt.resolvedUrl("assets/sphere.jpg") // this initial version supports correctly only full 360 panospheres
 
              MouseArea {
                  id: ma

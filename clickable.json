@@ -1,5 +1,6 @@
 {
   "clickable_minimum_required": "6.12.2",
   "builder": "cmake",
-  "kill": "photosphere"
+  "kill": "photosphere",
+  "dependencies_target": ["libglfw3-dev", "libgl1-mesa-dev", "libglu1-mesa-dev", "libglu1-mesa"]
 }
